@@ -171,7 +171,7 @@ export default {};
     background-image: linear-gradient(#110934, #4424d6);
   }
 }
-@media (min-width:769px) and (max-width: 1024px) {
+@media (min-width:769px) and (max-width: 1116px) {
     .text {
     font-size: 32px;
     font-weight: 300;

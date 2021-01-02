@@ -2,17 +2,20 @@
   <div id="app">
     <Navbar />
     <Main />
+    <Biography />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
+import Biography from "./components/Biography";
 export default {
   name: "App",
   components: {
     Navbar,
-    Main
+    Main,
+    Biography
   },
 };
 </script>
