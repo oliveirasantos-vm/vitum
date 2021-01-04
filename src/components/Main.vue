@@ -94,6 +94,7 @@ export default {};
 
 @media (max-width: 768px) {
   .main {
+    position: relative;
     height: auto;
     background-image: none;
     color: #110934;
@@ -154,14 +155,12 @@ export default {};
   /*grid-setting*/
   .grid-container {
     display: grid;
+    height: min-content;
     grid-auto-rows: 280px auto;
-  }
-  .grid-container {
-    height: 128px;
-  display: grid;
-  grid-template-columns: none;
+    grid-template-columns: none;
   grid-template-areas: "column-1 column-2";
-}
+  }
+  
   .item-a {
     grid-row: 2;
     background-color: #f0f7d4;

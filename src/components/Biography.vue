@@ -1,8 +1,8 @@
 <template>
   <div id="biography">
     <div class="grid">
-      <div class="column-1 row-1 item img childhood"></div>
-      <div class="column-2 row-1 item txt r">
+      <div class="column-1 row-1 item img childhood item-1"></div>
+      <div class="column-2 row-1 item txt r item-2">
         <div class="content">
           Olá, meu nome é Vitor Mateus, mas pode me chamar de vitum. Nasci em
           Gravataí, em 16 de janeiro de 2001, no Rio Grande do Sul, na região
@@ -13,7 +13,7 @@
           para usar, mas, mesmo assim, eu adorava ele.
         </div>
       </div>
-      <div class="column-1 row-2 item txt">
+      <div class="column-1 row-2 item txt item-3">
         <div class="content">
           Conforme fui crescendo, fui seguindo nessa área. Meu primeiro curso
           foi de Designer Gráfico, depois, Montagem e Manutenção de Computadores
@@ -24,7 +24,7 @@
           Instituto Federal do Rio Grande do Sul - Campus Osório.
         </div>
       </div>
-      <div class="column-2 row-2 item">
+      <div class="column-2 row-2 item item-4">
         <div class="img">
           <iframe
             id="video"
@@ -34,8 +34,8 @@
           ></iframe>
         </div>
       </div>
-      <div class="column-1 row-3 item img carrer"></div>
-      <div class="column-2 row-3 item txt">
+      <div class="column-1 row-3 item img carrer item-5"></div>
+      <div class="column-2 row-3 item txt item-6">
         <div class="content">
           Durante meus estudos, iniciei minha carreira no mercado de trabalho.
           Fui estagiário na WebSul Telecom LTDA, uma provedora de internet do
@@ -46,17 +46,19 @@
           empresa de ímãs de geladeira do Brasil.
         </div>
       </div>
-      <div class="column-1 row-4 item txt">
+      <div class="column-1 row-4 item txt item-7">
         <div class="content">
-          Hoje estou habilitado para desenvolver aplicações web, tanto front-end, com 
-          HTML, CSS e JavaScript, como back-end, com MySQL e Nodejs. Além de conhecimento
-          avançado em Designer Gráfico, sabendo utilizar as ferramentas de edição de imagem e vetor.
-          Também tenho facilidade em aprender coisas novas, esse site por exemplo, está sendo desenvolvido em vue.js,
-          acredita que eu nem conhecia esse framework antes? Enfim, hoje estou disponível no mercado de trabalho, mas 
-          quem sabe amanhã eu esteja trabalhando na sua empresa!
+          Hoje estou habilitado para desenvolver aplicações web, tanto
+          front-end, com HTML, CSS e JavaScript, como back-end, com MySQL e
+          Nodejs. Além de conhecimento avançado em Designer Gráfico, sabendo
+          utilizar as ferramentas de edição de imagem e vetor. Também tenho
+          facilidade em aprender coisas novas, esse site por exemplo, está sendo
+          desenvolvido em vue.js, acredita que eu nem conhecia esse framework
+          antes? Enfim, hoje estou disponível no mercado de trabalho, mas quem
+          sabe amanhã eu esteja trabalhando na sua empresa!
         </div>
       </div>
-      <div class="column-2 row-4 item img future"></div>
+      <div class="column-2 row-4 item img future item-8"></div>
     </div>
   </div>
 </template>
@@ -85,7 +87,7 @@
   align-items: center;
 }
 
-.carrer{
+.carrer {
   width: 70%;
   height: 220px;
   margin-top: 40px;
@@ -162,4 +164,97 @@
   background-repeat: no-repeat;
 }
 
+
+@media (max-width: 768px) {
+  #biography {
+    position: relative;
+    background-image: url("../assets/biography-bg-mobile.svg");
+    background-size: 280px 3072px;
+    background-color: #f0f7d4;
+    color: #110934;
+    height: 3072px;
+    background-repeat: no-repeat;
+    text-align: justify;
+    font-size: 14px;
+  }
+  .grid {
+    position: relative;
+    display: grid;
+    grid-template-rows: 512px 256px 512px 256px 512px 256px 512px 256px;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+  }
+  .item-1 {grid-row: 2; }
+  .item-2 {grid-row: 1;}
+  .item-3 {grid-row: 3;}
+  .item-4 {grid-row: 4; }
+  .item-5 {grid-row: 6;}
+  .item-6 {grid-row: 5;}
+  .item-7 {grid-row: 7;}
+  .item-8 {grid-row: 8;}
+  .row-1 {grid-row: 0;}
+  .row-2 {grid-row: 0;}
+  .row-3 {grid-row: 0;}
+  .row-4 {grid-row: 0;}
+  
+  .txt{
+    position: relative;
+  }
+  .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;;
+  }
+  .column-1 {
+    grid-column: 1;
+  }
+  .column-2 {
+    grid-column: 1;
+  }
+  .img {
+    position: relative;
+    width: 100%;
+    height: 75%;
+    margin-bottom: 25%;
+    margin-left: 0; margin-right: 0;
+    border-radius: 10px;
+  }
+  
+  .childhood {
+    background-image: url("../assets/childhood.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .carrer {
+    background-image: url("../assets/carrer.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #video {
+    width: 100%;
+    height: 75%;
+    margin-bottom: 25%;
+    margin-left: 0; margin-right: 0;
+    border-radius: 10px;
+  }
+  .future {
+    background-image: url("../assets/future.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 769px) and (max-width: 1116px) {
+}
+@media (min-width: 769px) and (max-width: 1116px) {
+}
+@media (min-width: 769px) and (max-width: 1116px) {
+}
 </style>
